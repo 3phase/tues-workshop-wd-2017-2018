@@ -40,7 +40,8 @@
 		});
 
 		for (i = 1; i <= 6; i++) {
-			$(".color-changers").append("<h"+i+">Hhaha</h"+i+"><br>");
+			$(".color-changers").append("<div class=\"change-color\" data-attr-color=\"" + i + i + i + "\">Dynamically generated</div>");
+
 		}
 
 		$(".change-color").on("click", function() {
