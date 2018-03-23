@@ -24,6 +24,7 @@
 	<button class="delete-button">Delete</button>
 
 	<h3>Change background color:</h3>
+	
 	<div class="change-color" data-attr-color="green">Green</div>
 	<div class="change-color" data-attr-color="red">Red</div>
 	<div class="change-color" data-attr-color="black">Black</div>
@@ -37,6 +38,8 @@
 		$(".delete-button").on("click", function() {
 			$(".test-input").val("");
 		});
+
+
 
 		$("[data-attr-color='red']").on("click", function() {
 			$("body").css("background-color", "#FF0000");
