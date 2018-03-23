@@ -39,18 +39,8 @@
 			$(".test-input").val("");
 		});
 
-
-
-		$("[data-attr-color='red']").on("click", function() {
-			$("body").css("background-color", "#FF0000");
-		});
-
-		$("[data-attr-color='black']").on("click", function() {
-			$("body").css("background-color", "#000000");
-		});
-
-		$("[data-attr-color='green']").on("click", function() {
-			$("body").css("background-color", "#00FF00");
+		$(".change-color").on("click", function() {
+			$("body").css("background-color", $(this).attr("data-attr-color"));
 		});
 
 	});
