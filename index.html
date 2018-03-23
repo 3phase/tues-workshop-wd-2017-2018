@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hahha</title>
+	<style type="text/css">
+	body { background-color: #000;}
+	.change-color {width: 300px; height: 300px; float: left; }
+	
+	</style>
+	<script type="text/javascript" 
+			src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+	<input type="text" class="test-input" placeholder="Name">
+	<br>
+	<button class="submit-button">Submit</button>
+	<button class="delete-button">Delete</button>
+
+	<h3>Change background color:</h3>
+	<div class="change-color" data-attr-color="green"></div>
+	<div class="change-color" data-attr-color="red"></div>
+	<div class="change-color" data-attr-color="black"></div>
+
+
+	<script>
+	$(document).ready(function() {
+		$(".submit-button").on("click", function() {
+			alert($(".test-input").val());
+		});
+		$(".delete-button").on("click", function() {
+			$(".test-input").val("");
+		});
+
+
+
+	});
+	</script>
+</body>
+</html>
