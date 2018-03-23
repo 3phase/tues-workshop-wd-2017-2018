@@ -6,8 +6,11 @@
 	<title>Hahha</title>
 	<style type="text/css">
 	body { background-color: #000;}
-	.change-color {width: 300px; height: 300px; float: left; }
-	
+	h1,h2,h3,h4 { color: #FFF; }
+	.change-color {width: 300px; height: 300px; float: left; color: #FFF;}
+	[data-attr-color="green"] { border: 1px solid #00FF00;}
+	[data-attr-color="red"] { border: 1px solid #FF0000;}
+	[data-attr-color="black"] { border: 1px solid #fff; background-color: #000;}
 	</style>
 	<script type="text/javascript" 
 			src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -21,9 +24,9 @@
 	<button class="delete-button">Delete</button>
 
 	<h3>Change background color:</h3>
-	<div class="change-color" data-attr-color="green"></div>
-	<div class="change-color" data-attr-color="red"></div>
-	<div class="change-color" data-attr-color="black"></div>
+	<div class="change-color" data-attr-color="green">Green</div>
+	<div class="change-color" data-attr-color="red">Red</div>
+	<div class="change-color" data-attr-color="black">Black</div>
 
 
 	<script>
