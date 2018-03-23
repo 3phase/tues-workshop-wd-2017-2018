@@ -10,7 +10,10 @@
 	.change-color {width: 300px; height: 300px; float: left; color: #FFF;}
 	[data-attr-color="green"] { border: 1px solid #00FF00;}
 	[data-attr-color="red"] { border: 1px solid #FF0000;}
-	[data-attr-color="black"] { border: 1px solid #000; background-color: #000;}
+	[data-attr-color="black"] { border: 1px solid #000;}
+	body {
+		background: img(https://newevolutiondesigns.com/images/freebies/new-york-manhattan-preview.jpg);
+	}
 	</style>
 	<script type="text/javascript" 
 			src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -27,7 +30,7 @@
 	
 	<div class="change-color" data-attr-color="green">Green</div>
 	<div class="change-color" data-attr-color="red">Red</div>
-	<div class="change-color" data-attr-color="black">Black</div>
+	<div class="change-color with-image" data-attr-color="https://newevolutiondesigns.com/images/freebies/new-york-manhattan-preview.jpg">Black</div>
 
 
 	<script>
@@ -40,7 +43,17 @@
 		});
 
 		$(".change-color").on("click", function() {
-			$("body").css("background-color", $(this).attr("data-attr-color"));
+			$("body").css({
+				"background-image": "none",
+				"background-color": $(this).attr("data-attr-color")
+			});
+		});
+
+		$(".change-color.with-image").on("click", function() {
+			$("body").css({
+				"background": "url("+$(this).attr("data-attr-color")+")",
+				"background-size": "cover"
+			});
 		});
 
 	});
