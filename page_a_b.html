@@ -11,19 +11,6 @@
 </head>
 <body>
 
-<form name="sample-form">
-<input type="text" placeholder="Name"><br>
-<input type="text" placeholder="Surname"><br>
-<input type="password" placeholder="Surname"><br>
-<input type="email" placeholder="Email"><br>
-<button id="submit-button">Submit</button>
-</form>
-<br>
-<br><br>
-
-
-<input id="input-name" placeholder="Type: "><br>
-
 
 <script src="http://api.jquery.com/resources/events.js"></script>
 <script>
@@ -36,15 +23,20 @@ $(document).ready(function() {
 	});
 
 	var xTriggered = 0;
+	var combinationWord = "pedal";
 
 	$("body").keypress(function( event ) {
-	  if ( event.which == 13 ) {
-	     event.preventDefault();
+	  if ( event.which == 80 ) {
+	  	  event.preventDefault();
+		  xTriggered++;
+		  var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
+		  $.print( msg, "html" );
+
+		  // if (xTriggered >= combinationWord.length) {
+		  // 	xTriggered = 0;
+		  // }
 	  }
-	  xTriggered++;
-	  var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
-	  $.print( msg, "html" );
-	  $.print( event );
+	  
 	});
 
 });
